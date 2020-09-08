@@ -1,0 +1,46 @@
+<div fxLayout="row" fxLayoutGap="25px">
+  <div fxFlex="70">
+    <div fxLayout="row">
+      <div>
+        <h1>{{ country.name }}</h1>
+      </div>
+      <div>
+        <mat-icon
+          color="accent"
+          (click)="addFavorites(country)"
+          class="icon-custom"
+        >
+          {{ country.favorite ? 'star' : 'star_outline' }}
+        </mat-icon>
+      </div>
+    </div>
+
+    <app-label-detail
+      label="Region"
+      [detail]="country.region"
+    ></app-label-detail>
+    <app-label-detail
+      label="Population"
+      [detail]="country.population | shortNumber"
+    ></app-label-detail>
+    <app-label-detail
+      label="Capital"
+      [detail]="country.capital"
+    ></app-label-detail>
+    <app-label-detail
+      label="Currency"
+      [detail]="country.currencies[0].name"
+    ></app-label-detail>
+    <app-label-detail
+      label="language"
+      [detail]="country.languages[0].name"
+    ></app-label-detail>
+    <app-label-detail
+      label="Border countries"
+      [detail]="country.bordersLeyend | borderList"
+    ></app-label-detail>
+  </div>
+  <div fxFlex>
+    <img [alt]="country.name" [src]="country.flag" width="170" />
+  </div>
+</div>
