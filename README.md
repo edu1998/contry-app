@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 path `src/assets/custom-components`
 
-##Demo
+## Demo
 
 link: http://countries.hardwarestore.tk/
 
